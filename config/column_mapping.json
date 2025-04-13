@@ -1,0 +1,21 @@
+{
+    "Wie lautet dein Vorname?": "name",
+    "Wie lautet dein Nachname?": "surname",
+    "Bist du Teil der Kooperation mit der Fakultät Psychologie der Universität Münster?": "psychologie_flag",
+    "Hast du eine Präferenz für die Gruppenzusammenstellung?": "preference_group",
+    "8:00-10:00": "time1",
+    "10:00-12:00": "time2",
+    "12:00-14:00": "time3",
+    "14:00-16:00": "time4",
+    "16:00-18:00": "time5",
+    "18:00-20:00": "time6",
+    "20:00-22:00": "time7",
+    "Welchen Track belegst du in dieser Journey?": "track",
+    "Hast du bereits vor TechLabs Erfahrungen in dem Themenbereich deines Tracks gesammelt, die hilfreich für die Projektphase sein können? Wenn ja, wie würdest du deinen Kenntnisstand einschätzen?": "experience",
+    "Wähle deine erste Priorität aus folgenden Interessen:": "priority_topic1",
+    "Wähle deine zweite Priorität aus folgenden Interessen:": "priority_topic2",
+    "Wähle deine dritte Priorität aus folgenden Interessen:": "priority_topic3",
+    "OPTIONAL: Nenne die Personen, mit denen du im Rahmen des Abschlussprojekts zusammenarbeiten möchtest.": "personal_preferences",
+    "Möchtest du lieber in einer Gruppe sein, die Englisch spricht?": "english",
+    "Gibt es noch weiteres Feedback, welches du nun loswerden möchtest?": "feedback"
+}
