@@ -172,3 +172,8 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Project specific
+config/name_id_map.json
+notebooks/group_selection.ipynb
+data
