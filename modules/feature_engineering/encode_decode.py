@@ -1,5 +1,7 @@
 """Contains function for encoding or decoding features."""
 
+from typing import List
+
 import pandas as pd
 import numpy as np
 
@@ -38,3 +40,27 @@ def dummy_encode_column(
         data.drop(column, inplace=inplace, axis=1)
 
     return pd.concat([data, encoded_df], axis=1)
+
+
+def create_binary_encoding_time_slots(data: pd.DataFrame, days: List[str],time_columns: List[str], drop_old_cols: bool = True) -> pd.DataFrame:
+    """Creates a binary encoding for all time slot columns in ``time_columns``. The list of ``days``
+    represents the values present in the time columns, which are usually the days in a week.
+
+    Args:
+        data (pd.DataFrame): Dataframe in which the columns should be encoded.
+        days (List[str]): Names of the days present in the time columns.
+        time_columns (List[str]): Name of the time solumns.
+        drop_old_cols (bool, optional): If True, the old columns are dropped in place.
+        Defaults to True.
+
+    Returns:
+        pd.DataFrame: The original dataframe containing the new encoded columns.
+    """
+
+    # Create binary encoding for each time slot
+    for time_col in time_columns:
+        for day in days:
+            data[f"{time_col}_{day}"] = data[time_col].apply(lambda x: 1 if day in x else 0)
+
+    # Drop original columns if no longer needed
+    return data.drop(columns=time_columns, inplace = drop_old_cols)
